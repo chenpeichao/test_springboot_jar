@@ -15,4 +15,9 @@ public class UserController {
     public String find() {
         return "wojiushiwo";
     }
+
+    @GetMapping("/")
+    public String login() {
+        return "登录成功！";
+    }
 }
