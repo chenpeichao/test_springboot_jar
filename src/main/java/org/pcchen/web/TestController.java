@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 //为了避免中文乱码-此处最好设置字符串的字符集
 //此注解用于获取指定文件下面的常量值
-@PropertySource(value = {"classpath:config/common.properties"},encoding="utf-8")
+@PropertySource(value = {"classpath:config/constant.properties"},encoding="utf-8")
 @Log4j
 public class TestController {
 
@@ -28,7 +28,10 @@ public class TestController {
      */
     @GetMapping("/getCommonValue")
     public String find() {
-        log.error("lombok output log");
+        log.debug("debug=======lombok output log哈");
+        log.info("info=======lombok output log哈");
+        log.warn("warn=======lombok output log哈");
+        log.error("error=======lombok output log哈");
         return commonName;
     }
 }
