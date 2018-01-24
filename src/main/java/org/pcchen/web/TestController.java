@@ -1,5 +1,6 @@
 package org.pcchen.web;
 
+import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 //为了避免中文乱码-此处最好设置字符串的字符集
 //此注解用于获取指定文件下面的常量值
 @PropertySource(value = {"classpath:config/common.properties"},encoding="utf-8")
+@Log4j
 public class TestController {
 
     @Value("${common.name}")
@@ -26,7 +28,7 @@ public class TestController {
      */
     @GetMapping("/getCommonValue")
     public String find() {
+        log.error("lombok output log");
         return commonName;
     }
-
 }
