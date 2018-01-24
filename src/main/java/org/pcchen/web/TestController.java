@@ -36,10 +36,10 @@ public class TestController {
     @GetMapping("/getCommonValue")
     public String find() {
         System.out.println(book.getName());
-//        log.debug("debug=======lombok output log哈");
-//        log.info("info=======lombok output log哈");
-//        log.warn("warn=======lombok output log哈");
-//        log.error("error=======lombok output log哈");
+        log.debug("debug=======lombok output log哈");
+        log.info("info=======lombok output log哈");
+        log.warn("warn=======lombok output log哈");
+        log.error("error=======lombok output log哈");
         return commonName;
     }
 }
