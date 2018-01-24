@@ -13,7 +13,10 @@ public class TestSpringbootJarApplication {
 //		SpringApplicationBuilder builder = new SpringApplicationBuilder(TestSpringbootJarApplication.class);
 //		//修改Banner的模式为OFF
 //		builder.bannerMode(Banner.Mode.OFF).run(args);
+
 		SpringApplication springApplication = new SpringApplication(TestSpringbootJarApplication.class);
+		//设置取消控制台对于springboot大字的打印
+		//springApplication.setBannerMode(Banner.Mode.OFF);
 		springApplication.run(args);
 	}
 }
