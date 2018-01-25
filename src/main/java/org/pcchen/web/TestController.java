@@ -2,18 +2,13 @@ package org.pcchen.web;
 
 import lombok.extern.log4j.Log4j;
 import org.pcchen.bean.Book;
-import org.pcchen.bean.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 用户controller
@@ -21,10 +16,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/test")
-//为了避免中文乱码-此处最好设置字符串的字符集
-//此注解用于获取指定文件下面的常量值
-@ConfigurationProperties(prefix = "book")
-@PropertySource(value = {"classpath:config/constant.properties"},encoding="utf-8")
 @Log4j
 public class TestController {
 
